@@ -126,7 +126,7 @@ const VideoVertical = ({video, SearchScreen, subpsScreen,likedVideoScreen,WatchS
                     </p>
                     
                     {/* Will Show Views and Date published at Only IF THE type is a SearchScreen ,WatchScreen */}
-                    {(SearchScreen || WatchScreen) &&
+                    {((isVideo && SearchScreen) || WatchScreen) &&
                         <div className="video-vertical-details">
                             <span>
                                 <AiFillEye /> {numeral(views).format("0.a").toUpperCase()} views • &nbsp;
