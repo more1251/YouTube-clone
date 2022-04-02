@@ -24,8 +24,8 @@ const SearchScreen = () => {
         <Container>
             <HelmetCustom title={`${query}-YouTube`}/>
             {!loading ? (
-                videos?.map((video) => (
-                    <VideoVertical video={video} key={video.id.videoId} SearchScreen />
+                videos?.map((video,i) => (
+                    <VideoVertical video={video} key={i} SearchScreen />
                 ))
             ) : (
                 <SkeletonTheme baseColor="#343a40" highlightColor="#3c4147">

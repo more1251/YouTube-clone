@@ -59,9 +59,9 @@ const HomeScreen = () => {
                         
                     ))
                     :
-                    [...Array(20)].map(()=>(
+                    [...Array(20)].map((i)=>(
                     <Col lg={3} md={4}>
-                      <SkeletonVid/>
+                      <SkeletonVid key={i}/>
                     </Col>
                     ))
                     }

@@ -25,8 +25,8 @@ const SubsciptionScreen = () => {
         <Container fluid>
             <HelmetCustom title={`${SubsTitle}-YouTube`}/>
             {!loading ? (
-                channel?.map((video) => (
-                    <VideoVertical video={video} key={video.id} subpsScreen/>
+                channel?.map((video,i) => (
+                    <VideoVertical video={video} key={i} subpsScreen/>
                 ))
             ) : (
                 <SkeletonTheme baseColor="#343a40" highlightColor="#3c4147">

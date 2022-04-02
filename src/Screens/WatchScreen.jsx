@@ -56,8 +56,8 @@ const WatchScreen = () => {
             <Col lg={4}>
 
                 {!loading ? videos?.filter((video) => video.snippet)
-                    .map((video) =>
-                        <VideoVertical video={video} key={video.id.videoId} WatchScreen/>
+                    .map((video,i) =>
+                        <VideoVertical video={video} key={i} WatchScreen/>
                     )
                     :
                     <SkeletonTheme baseColor="#343a40" highlightColor="#3c4147">

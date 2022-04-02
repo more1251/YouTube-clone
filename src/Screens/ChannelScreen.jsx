@@ -61,8 +61,8 @@ const ChannelScreen = () => {
                 <Row className="mt-2">
                     {!loading ? (
                         videos?.map((video,i) => (
-                            <Col md={4} lg={3}>
-                                <VideoComp video={video} key ={i} channelScreen />
+                            <Col md={4} lg={3} key={i}>
+                                <VideoComp video={video} channelScreen />
                             </Col>
                         ))
                     ) : (
