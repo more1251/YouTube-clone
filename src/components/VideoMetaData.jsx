@@ -40,14 +40,14 @@ const VideoMetaData = ({video :{snippet,statistics}, videoId}) => {
                 <h5>{title}</h5>
 
                 <div className="d-flex justify-content-between align-items-center py-1">
-                    <span>
+                    <span className='viewandlike'>
                         {numeral(viewCount).format("0.a").toUpperCase()} Views • &nbsp;   
 
                         {month.length>3?month.slice(0,3):month}&nbsp;{day},&nbsp;{year}
                     </span>
 
                     <div className='cursor'>
-                        <span className='me-3'>
+                        <span className='me-3 thumbsup'>
                             <MdThumbUp size={26}/>&nbsp;&nbsp;{numeral(likeCount).format("0.a").toUpperCase()} 
                         </span>
                         <span className='me-3'>
@@ -61,7 +61,7 @@ const VideoMetaData = ({video :{snippet,statistics}, videoId}) => {
 
             <div className="video-MetaData-channel d-flex justify-content-between align-items-center my-2 py-3">
 
-                <div className="d-flex">
+                <div className="d-flex channel-data">
                     <img src={channel?.video?.snippet?.thumbnails?.default?.url} alt="user-channel" className='rounded-circle me-3'/>
 
                     <div className='d-flex flex-column'>
@@ -73,7 +73,7 @@ const VideoMetaData = ({video :{snippet,statistics}, videoId}) => {
                 {subsStatus? 
                 <div>
                 <button className="btn border-0 p-2 m-2" style={{backgroundColor: "rgba(255, 255, 255, 0.1)", color:"#aaa"}}>Subscribed</button>
-                <AiFillBell size={25} /> 
+                <AiFillBell size={25} className="bell"/> 
                 </div>
                 :
                 <button className="btn border-0 p-2 m-2">Subscribe</button>

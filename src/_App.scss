@@ -327,12 +327,6 @@
 
 
 .video-MetaData{
-      
-    // &-top{
-    //     span{
-    //         cursor: pointer
-    //     }
-    // }
 
     &-channel{
         border-top: 0.2px solid $border-color;
@@ -539,6 +533,11 @@
 /*Media-Queries*/
 
 @media (max-width: $breakpoint-small){
+    
+    html,body{
+        overflow-x: hidden;
+    }
+
     .header{
         padding: 1rem;
 
@@ -627,16 +626,48 @@
     }
     
     .video-MetaData{
-       &-top{
+        &-top{
+            
+            padding: 5px;
+            
             h5{
+                font-size: 18px;
+            }
+            .viewandlike{
+                display: none;
+            }
+    
+            .thumbsup{
+                margin-right: 40px !important;
+            }
+        }
+
+
+        &-channel{
+
+            .channel-data{
+                padding: 12px;
+            }
+
+            .bell{
+                display: none;
+            }
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            
+            span{
                 font-size: 15px;
             }
 
-            span{
-                font-size: 14px;
+            .btn{
+                font-size: 15px;
+                padding: 5px !important;
+                border-radius: 3px;
             }
-
-        }   
+        }
     }
 
     .login{
