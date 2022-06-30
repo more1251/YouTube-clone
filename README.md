@@ -1,5 +1,7 @@
 # YouTube Clone Using React-Redux and YouTube API
 
+![Logo](./public/ytcl.png)
+
 This Project is a Simple YouTube CLone Using React,Redux,Firebas and YouTube API.
 
 Firebase Used For Login Authorization and YouTube API to Get the Data To Display.
